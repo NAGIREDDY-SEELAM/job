@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<style>
+    /* Styles for the navigation */
+    .nav {
+        background-color: #F0F0F0;
+      padding: 20px;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .nav a {
+        display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 600px) {
+      .nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .nav a {
+        margin: 5px;
+      }
+    }
+    /* CSS Styles for the form */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F0F0F0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+ 
+/* person css */
+
+.person-container {
+      
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: antiquewhite;
+    }
+
+    .person-container h2 {
+      text-align: center;
+    }
+
+    .person-container p {
+      margin-bottom: 10px;
+    }
+
+    .person-container .label {
+      font-weight: bold;
+    }
+
+
+     
+  </style>
+<body>
+  
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>        
+        <a href="job.html">Get work</a>
+        
+ 
+
+      </div>
+      <div  class="description" style="background-color: antiquewhite;padding: 20px;font-family: Arial, Helvetica, sans-serif;">
+      <p>
+       <h3> Welcome to our Part-Time Job Application Form!</h3>
+
+We are excited that you are interested in finding a 
+part-time job through our platform. Our application form 
+is designed to gather essential information about you, your skills, and your availability, helping us match you with suitable part-time job opportunities. Here's a step-by-step guide on how to fill the form:
+      </p>
+    </div><br><br>
+
+
+      <div class="form" style="background-color: aliceblue;">
+        <form action="job_form.php" method="POST">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br>
+        
+            <label for="phno">Phone Number:</label>
+            <input type="text" id="phno" name="phno" required><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+        
+            <label for="work">Profession:</label>
+            
+            <select name="work" id="work" required>
+              <option value="">Select Your Profession </option>
+              <option value="category1">Electrician</option>
+              <option value="category2">Carpenter</option>
+              <option value="category3">Cleaner</option>
+            </select>
+            <br>
+        
+            <input type="submit" value="Submit"  onclick="submitForm()">
+          </form>
+          <script>
+            function submitForm() {
+
+              alert("Data Passed Successfully");
+              
+            window.location.href = "index.html";
+            }
+          </script>
+        
+      </div><br><br>
+
+      <div class="person-container" >
+        <h2>Demo Person Information</h2>
+        <img src="profile.jpg" width="100px" style="border-radius: 50%;overflow: hidden;" >
+        <p><span class="label">Name:</span> Nagi Reddy</p>
+        <p><span class="label">Age:</span> 22</p>
+        <p><span class="label">Profession:</span>Developer</p>
+        <p><span class="label">Location:</span> Hyderabad, India</p>
+        <p><span class="label">E-mail:</span> <a href="mailto:seelam.nanireddy11@gmail.com"  style="color: blue; text-decoration: none;">seelam.nanireddy11@gmail.com</a></p>
+        <p><span class="label">Phone:</span> <a href="tel:+91 9603280714" style="color: blue; text-decoration: none;">9603280714</a> </p>
+       
+      </div>
+    
+</body>
+</html>
